@@ -1,0 +1,27 @@
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #0d6efd; /* Primary blue */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.navbar-brand img {
+  height: 100px;
+  width: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+.navbar-brand:hover {
+  color: #084298; /* darker blue */
+  transform: scale(1.02);
+}
+
+.navbar-brand img:hover {
+  transform: rotate(-3deg) scale(1.05);
+}
