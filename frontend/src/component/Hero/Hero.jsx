@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 function Hero() {
   return (
     <div className="container-fluid bg-primary py-5 mb-5 hero-header">
@@ -16,7 +16,7 @@ function Hero() {
                     <h1 className="display-1 text-white mb-md-4">Best Healthcare Solution In Your City</h1>
                     <div className="pt-2">
                         <a href="" className="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Find Doctor</a>
-                        <a href="" className="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Appointment</a>
+                        <Link to="/appointment" className="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Appointment</Link>
                     </div>
                 </div>
             </div>
