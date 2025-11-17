@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Topbar from './component/Topbar/Topbar'
@@ -22,15 +22,24 @@ import SearchPage from './pages/search/SearchPage'
 import TestimonalPage from './pages/testimonal/TestimonalPage'
 import AppointmentPage from './pages/appointment/AppointmentPage'
 import ContactPage from './pages/contact/ContactPage'
-
+import Signup from './pages/Signup/Signup'
+import Signin from './pages/Signin/Signin'
+import AddPatient from './component/Patient/AddPatient/AddPatient'
+import PatientList from './component/Patient/PatientList/PatientList'
+import { AuthContext } from './context/AuthContext'
+import ProtectedRoute from './context/ProtectedRoute'
+import AddMedicalCertificate from './component/MedicalCertificate/AddMedicalCertificate'
+import MedicalCertificatePage from './pages/MedicalCertificate/MedicalCertificatePage'
+import PatientInfo from './component/Patient/PatientInfo/PatientInfo'
 function App() {
-  const [count, setCount] = useState(0)
-
+  const { isLoggedIn } = useContext(AuthContext);
   return (
     <>
-      <Topbar />
-      <Navbar />
+      {!isLoggedIn && <Topbar />}
+      {!isLoggedIn && <Navbar />}
         <Routes>
+          <Route path='/signup' element={<Signup />}/>
+          <Route path='/signin' element={<Signin />}/>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicePage />}/>
           <Route path="/prices" element={<PricePage />}/>
@@ -40,9 +49,24 @@ function App() {
           <Route path='/testimonial' element={<TestimonalPage />} />
           <Route path='/appointment' element={<AppointmentPage />} />
           <Route path='/contact' element={<ContactPage />} />
+          <Route path='/patient-info' element={<PatientInfo />} />
+          <Route path='/patients' element={
+              <ProtectedRoute>
+                <PatientList />
+              </ProtectedRoute>
+              }/>
+          <Route path='/patient' element={
+              <ProtectedRoute>
+                  <AddPatient />
+              </ProtectedRoute>}/>
+            <Route path="/medicalcertificate/:patientId" element={
+                <ProtectedRoute>
+                    <MedicalCertificatePage />
+                </ProtectedRoute>} />
         </Routes>
 
-      <Footer /> 
+      {/* {!isLoggedIn &&} */}
+       <Footer />
     </>
   )
 }

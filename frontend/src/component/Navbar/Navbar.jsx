@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link ,NavLink} from 'react-router-dom'
 import ananiya from '../../assets/img/ananiya.jpg';
 import './Navbar.css';
+import { AuthContext } from '../../context/AuthContext';
 function Navbar() {
+   const { isLoggedIn } = useContext(AuthContext);
+
+  // Hide navbar when logged in
+  if (isLoggedIn) return null;
   return (
      <div className="container-fluid sticky-top bg-white shadow-sm">
       <div className="container">
@@ -27,7 +32,7 @@ function Navbar() {
 
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto py-0">
-              <NavLink to="/" className="nav-item nav-link">
+              <NavLink to="/anawebs" className="nav-item nav-link">
                 Home
               </NavLink>
               <NavLink to="/about" className="nav-item nav-link">
@@ -45,6 +50,9 @@ function Navbar() {
                   Pages
                 </a>
                 <div className="dropdown-menu m-0">
+                  <NavLink to="/patient-info" className="dropdown-item">
+                    View Information
+                  </NavLink>
                   <NavLink to="/blog" className="dropdown-item">
                     Blog Grid
                   </NavLink>
@@ -69,6 +77,15 @@ function Navbar() {
               <NavLink to="/contact" className="nav-item nav-link">
                 Contact
               </NavLink>
+                {/* Mobile Buttons */}
+            <div className="d-lg-none mt-3">
+              <NavLink to="/signup" className="btn btn-primary w-100 mb-2">
+                Sign Up
+              </NavLink>
+              <NavLink to="/signin" className="btn btn-outline-primary w-100">
+                Sign In
+              </NavLink>
+            </div>
             </div>
           </div>
         </nav>

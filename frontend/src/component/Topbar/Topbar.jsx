@@ -1,9 +1,16 @@
-import React from 'react'
+import React,{useContext} from 'react';
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap-icons/font/bootstrap-icons.css";
 // import "@fortawesome/fontawesome-free/css/all.min.css";
 // import "../css/style.css";
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 function Topbar() {
+
+     const { isLoggedIn } = useContext(AuthContext);
+  
+    // Hide navbar when logged in
+    if (isLoggedIn) return null;
   return (
      <div className="container-fluid py-2 border-bottom d-none d-lg-block">
       <div className="container">
@@ -47,6 +54,15 @@ function Topbar() {
               <a className="text-body ps-2" href="#">
                 <i className="fab fa-youtube"></i>
               </a>
+              {/* Desktop Buttons */}
+              <div className="d-none d-lg-flex align-items-center ms-3">
+                <Link to="/signup" className="btn btn-primary me-2 px-3">
+                  Sign Up
+                </Link>
+                <Link to="/signin" className="btn btn-outline-primary px-3">
+                  Sign In
+                </Link>
+              </div>
             </div>
           </div>
         </div>
