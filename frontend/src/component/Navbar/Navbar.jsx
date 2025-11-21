@@ -32,7 +32,7 @@ function Navbar() {
 
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto py-0">
-              <NavLink to="/anawebs" className="nav-item nav-link">
+              <NavLink to="/" className="nav-item nav-link">
                 Home
               </NavLink>
               <NavLink to="/about" className="nav-item nav-link">

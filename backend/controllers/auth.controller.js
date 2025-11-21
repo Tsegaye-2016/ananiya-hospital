@@ -20,7 +20,9 @@ async function signin(req, res) {
   try {
     const { email, password } = req.body;
 
+    console.log("Signin called with:", email, password);
     const result = await authService.signin(email, password);
+    console.log("Signin result:", result);
 
     return res.json({
       message: "Login successful",
