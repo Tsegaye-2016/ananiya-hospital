@@ -13,7 +13,9 @@ function Signin() {
     const handleSubmit = async (e) =>{
          e.preventDefault();
         try {
+          console.log("SIGNIN CLICKED"); 
             const res = await signin(form);
+            console.log("SIGNIN RESPONSE:", res);
             if(res.token){
                 localStorage.setItem("token", res.token);
                 setMsg("Signin successful!");
