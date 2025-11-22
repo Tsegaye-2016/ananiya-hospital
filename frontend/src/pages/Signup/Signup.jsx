@@ -29,7 +29,7 @@ function Signup() {
             setForm({ name: "", email: "", password: "" });
             // Navigate to Signin page after 1 second
             setTimeout(() => {
-            navigate("/signin");
+            navigate("/ananiya-webs/signin");
             }, 1000);
         } catch (err) {
             setMsg("Something went wrong!");

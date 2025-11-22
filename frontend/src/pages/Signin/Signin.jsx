@@ -25,7 +25,7 @@ function Signin() {
                 // Navigate to Signin page after 1 second
                 // setTimeout(() => {
                 setIsLoggedIn(true);
-                navigate("/patients");
+                navigate("/ananiya-webs/patients");
                 // }, 1000);
 
             }else{

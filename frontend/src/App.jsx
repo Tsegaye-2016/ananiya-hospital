@@ -38,24 +38,24 @@ function App() {
       {!isLoggedIn && <Topbar />}
       {!isLoggedIn && <Navbar />}
         <Routes>
-          <Route path='/signup' element={<Signup />}/>
-          <Route path='/signin' element={<Signin />}/>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<ServicePage />}/>
-          <Route path="/prices" element={<PricePage />}/>
-          <Route path="/about" element={<AboutPage />}/>
-          <Route path='/team' element={<TeamPage />} />
-          <Route path='/search' element={<SearchPage />} />
-          <Route path='/testimonial' element={<TestimonalPage />} />
-          <Route path='/appointment' element={<AppointmentPage />} />
-          <Route path='/contact' element={<ContactPage />} />
-          <Route path='/patient-info' element={<PatientInfo />} />
-          <Route path='/patients' element={
+          <Route path='/ananiya-webs/signup' element={<Signup />}/>
+          <Route path='/ananiya-webs/signin' element={<Signin />}/>
+          <Route path="/ananiya-webs" element={<HomePage />} />
+          <Route path="/ananiya-webs/services" element={<ServicePage />}/>
+          <Route path="/ananiya-webs/prices" element={<PricePage />}/>
+          <Route path="/ananiya-webs/about" element={<AboutPage />}/>
+          <Route path='/ananiya-webs/team' element={<TeamPage />} />
+          <Route path='/ananiya-webs/search' element={<SearchPage />} />
+          <Route path='/ananiya-webs/testimonial' element={<TestimonalPage />} />
+          <Route path='/ananiya-webs/appointment' element={<AppointmentPage />} />
+          <Route path='/ananiya-webs/contact' element={<ContactPage />} />
+          <Route path='/ananiya-webs/patient-info' element={<PatientInfo />} />
+          <Route path='/ananiya-webs/patients' element={
               <ProtectedRoute>
                 <PatientList />
               </ProtectedRoute>
               }/>
-          <Route path='/patient' element={
+          <Route path='/ananiya-webs/patient' element={
               <ProtectedRoute>
                   <AddPatient />
               </ProtectedRoute>}/>

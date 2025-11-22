@@ -56,10 +56,10 @@ function Topbar() {
               </a>
               {/* Desktop Buttons */}
               <div className="d-none d-lg-flex align-items-center ms-3">
-                <Link to="/signup" className="btn btn-primary me-2 px-3">
+                <Link to="/ananiya-webs/signup" className="btn btn-primary me-2 px-3">
                   Sign Up
                 </Link>
-                <Link to="/signin" className="btn btn-outline-primary px-3">
+                <Link to="/ananiya-webs/signin" className="btn btn-outline-primary px-3">
                   Sign In
                 </Link>
               </div>
