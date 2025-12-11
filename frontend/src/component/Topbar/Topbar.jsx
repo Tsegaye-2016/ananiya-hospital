@@ -23,7 +23,7 @@ function Topbar() {
                 href="tel:+0123456789"
               >
                 <i className="bi bi-telephone me-2"></i>
-                +012 345 6789
+                +251 91 153 7418
               </a>
               <span className="text-body">|</span>
               <a

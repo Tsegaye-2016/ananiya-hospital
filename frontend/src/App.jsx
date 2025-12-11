@@ -36,7 +36,8 @@ function App() {
   return (
     <>
       {!isLoggedIn && <Topbar />}
-      {!isLoggedIn && <Navbar />}
+      {/* {!isLoggedIn && <Navbar />} */}
+      <Navbar />
         <Routes>
           <Route path='/ananiya-webs/signup' element={<Signup />}/>
           <Route path='/ananiya-webs/signin' element={<Signin />}/>
@@ -50,6 +51,7 @@ function App() {
           <Route path='/ananiya-webs/appointment' element={<AppointmentPage />} />
           <Route path='/ananiya-webs/contact' element={<ContactPage />} />
           <Route path='/ananiya-webs/patient-info' element={<PatientInfo />} />
+          <Route path='/ananiya-webs/appointment' element={<AppointmentPage />} />
           <Route path='/ananiya-webs/patients' element={
               <ProtectedRoute>
                 <PatientList />

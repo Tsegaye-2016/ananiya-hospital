@@ -58,10 +58,10 @@ function Footer() {
         <div className="container">
             <div className="row g-5">
                 <div className="col-md-6 text-center text-md-start">
-                    <p className="mb-md-0">&copy; <a className="text-primary" href="#">Your Site Name</a>. All Rights Reserved.</p>
+                    <p className="mb-md-0">&copy; <a className="text-primary" href="#">Ananiya Hospital</a>. All Rights Reserved.</p>
                 </div>
                 <div className="col-md-6 text-center text-md-end">
-                    <p className="mb-0">Designed by <a className="text-primary" href="https://htmlcodex.com">HTML Codex</a></p>
+                    <p className="mb-0">Designed by <a className="text-primary" href="https://mail.google.com/mail">Tsegaye Alamirew</a></p>
                 </div>
             </div>
         </div>

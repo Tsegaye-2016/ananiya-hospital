@@ -84,7 +84,7 @@ function Signup() {
 
           <div className="mt-3 text-center">
             <small>
-              Already have an account? <Link className="btn btn-outline-primary px-3" to="/signin">Signin</Link>
+              Already have an account? <Link className="btn btn-outline-primary px-3" to="/ananiya-webs/signin">Signin</Link>
             </small>
           </div>
         </form>

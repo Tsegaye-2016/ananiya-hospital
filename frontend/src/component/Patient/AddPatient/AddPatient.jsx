@@ -38,7 +38,7 @@ function AddPatient() {
                 address: "",
                 passport_number: "",
             });
-            navigate("/patients");
+            navigate("/ananiya-webs/patients");
         } catch (error) {
             setError(error.message);
         }

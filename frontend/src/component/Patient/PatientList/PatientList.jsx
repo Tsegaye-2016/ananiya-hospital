@@ -87,7 +87,7 @@ function PatientList() {
       {/* HEADER + ADD BUTTON */}
       <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-3">
         <h2 className="mb-2 mb-md-0 text-center text-md-start">Patient List</h2>
-        <Link to="/patient">
+        <Link to="/ananiya-webs/patient">
           <button className="btn btn-primary w-100 w-md-auto">Add Patient</button>
         </Link>
       </div>

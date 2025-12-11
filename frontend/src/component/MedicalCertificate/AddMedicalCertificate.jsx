@@ -83,7 +83,7 @@ function AddMedicalCertificate({patientId}) {
   return (
   <div className="container mt-3">
   <div className="p-4 bg-light rounded shadow">
-  <h3>Add Medical Certificate for Patient: {patienntId}</h3>
+  <h3>Add Medical Certificate for Patient: {patientId}</h3>
 
   {message && <div className="alert alert-success">{message}</div>}
   {error && <div className="alert alert-danger">{error}</div>}

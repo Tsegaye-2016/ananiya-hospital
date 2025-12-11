@@ -49,8 +49,8 @@ function AboutPage() {
                         </div>
                         <div className="col-sm-3 col-6">
                             <div className="bg-light text-center rounded-circle py-4">
-                                <i className="fa fa-3x fa-ambulance text-primary mb-3"></i>
-                                <h6 className="mb-0">Free<small className="d-block text-primary">Ambulance</small></h6>
+                                <i className="fa fa-3x fa-bed text-primary mb-3"></i>
+                                <h6 className="mb-0">Inpatient<small className="d-block text-primary">Service</small></h6>
                             </div>
                         </div>
                     </div>

@@ -140,7 +140,7 @@ const downloadPatientPDF = async (req, res) => {
       <div class="content">
           <div class="patient-container">
            <!-- Patient Photo Frame -->
-              <div style="width:150px; height:180px; border: 3px solid #1a73e8; padding:5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2); border-radius:8px;">
+              <div style="width:150px; height:140px; border: 3px solid #1a73e8; padding:5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2); border-radius:8px;">
                 <img src="" 
                     alt="Patient Photo" 
                     style="width:100%; height:100%; object-fit: cover; border-radius:5px;" />
